@@ -45,6 +45,8 @@ CREATE TABLE IF NOT EXISTS free_board(
 );
 
 // 여기는 추가 할것들
+
+RENAME TABLE board TO view_board;
 ALTER TABLE view_board ADD COLUMN bo_show_type VARCHAR(50) AFTER bo_id;
 ALTER TABLE free_board ADD COLUMN bo_show_type VARCHAR(50) AFTER bo_id;
 UPDATE view_board SET bo_show_type = "view_board";
